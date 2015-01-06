@@ -7,7 +7,7 @@ google-search-api
 
 A simple `GET` request to the endpoint with querystring `query`, as per example below:
 ```bash
-curl https://google-search-api.herokuapp.com/api/search?query=maru+the+cat
+curl https://googlesearch.herokuapp.com/api/search?query=maru+the+cat
 ```
 
 ### Response
