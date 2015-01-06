@@ -4,23 +4,22 @@
  */
 
 var render = require('../lib/render');
-
-/**
- * Define `Routes` and `dodo`.
- */
-
-var Routes = {};
+var google = require('../lib/google');
 
 /**
  * Render index html page.
  */
 
-Routes.index = function *index() {
+module.exports.index = function *() {
   this.body = yield render('index');
 };
 
 /**
- * Expose `Routes`.
+ * API routes, get search results.
  */
 
-module.exports = Routes;
+module.exports.search = function *() {
+  var qs = this.request.query;
+  if (!qs.query) return this.body = 'Need to provide query.';
+  this.body = yield google.search(qs.query);
+};

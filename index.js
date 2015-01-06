@@ -24,9 +24,3 @@ co(function*() {
   });
 
 });
-
-/**
- * title: $('li.g a').text()
- * link:  $('li.g a').attr('data-href')
- * blurb: $('li.g span.st).text()
- */
