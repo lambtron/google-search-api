@@ -15,11 +15,17 @@ co(function*() {
   $('li.g').each(function(i, el) {
     var result = {
       title: $(el).find('h3 a').text(),
-      link: $(el).find('h3 a').attr('data-href'),
+      link: $(el).find('h3 a').attr('href'),
       blurb: $(el).find('span.st').text()
     };
 
-    console.log(result);
+    // after /url?q= and before &sa=
+    var url = /url\?q=(.*)?(?=&sa)/;
+
+    console.log(result.link);
+    result.link = result.link.match(url);
+    console.log(result.link);
+
     console.log('\n\n\n\n');
   });
 
