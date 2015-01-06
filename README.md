@@ -3,6 +3,8 @@ google-search-api
 
 > Simple Google search API.
 
+![](http://media.giphy.com/media/daBOvrk2ejViU/giphy.gif)
+
 ### Request
 
 A simple `GET` request to the endpoint with querystring `query`, as per example below:
@@ -28,6 +30,10 @@ An array of the results with `title`, `blurb`, and `link`:
   // ..
 ]
 ```
+
+### Try it
+
+Click [here](https://googlesearch.herokuapp.com/api/search?query=maru+the+cat).
 
 ## License (MIT)
 
