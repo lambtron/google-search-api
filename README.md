@@ -1,7 +1,33 @@
 google-search-api
 =================
 
-Simple Google search API.
+> Simple Google search API.
+
+### Request
+
+A simple `GET` request to the endpoint with querystring `query`, as per example below:
+```bash
+curl https://google-search-api.herokuapp.com/api/search?query=maru+the+cat
+```
+
+### Response
+
+An array of the results with `title`, `blurb`, and `link`:
+```javascript
+[
+  {
+    "title":"Maru (cat) - Wikipedia, the free encyclopedia",
+    "blurb":"Maru (まる, Japanese: circle or round; born May 24, 2007) is a male Scottish Fold \n(straight variety) cat in Japan who has become popular on YouTube. As of April ...",
+    "link": "http://en.wikipedia.org/wiki/Maru_(cat)"
+  },
+  {
+    "title":"mugumogu - YouTube",
+    "blurb":"名前：まる 種類：スコティッシュフォールド オス Name:Maru Breed:Scottish Fold Male.",
+    "link": "https://www.youtube.com/user/mugumogu"
+  }
+  // ..
+]
+```
 
 ## License (MIT)
 
